@@ -68,7 +68,7 @@ function MapWithHoverAndClickHandler() {
         const { lat, lng } = event.latlng;
 
         try {
-            const response = await fetch(`http://localhost:3001/api/data?lat=${lat}&lng=${lng}`);
+            const response = await fetch(`https://backend-743j.onrender.com/api/data?lat=${lat}&lng=${lng}`);
             const data = await response.json();
             setClickedLatLng({ lat, lon: lng });
             setFetchedData(data);
